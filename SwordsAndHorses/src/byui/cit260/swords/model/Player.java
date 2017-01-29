@@ -67,10 +67,7 @@ public class Player implements Serializable{
         if (Double.doubleToLongBits(this.progress) != Double.doubleToLongBits(other.progress)) {
             return false;
         }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.name, other.name);
     }
     
     
