@@ -5,6 +5,8 @@
  */
 package swordsandhorses;
 
+import byui.cit260.swords.model.Map;
+
 /**
  *
  * @author Justen
@@ -15,7 +17,7 @@ public class SwordsAndHorses {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
     }
     
 }
