@@ -1,22 +1,20 @@
-package byui.cit260.swordsAndHorses.model;
+package byui.cit260.swords.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 /**
  *
  * @author Gavin Siegel
  */
 public class Player implements Serializable {
-    private double name;
+    private String name;
     private double progress;
 
- public Player() {
-    }
-
-    public double getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(double name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -28,11 +26,13 @@ public class Player implements Serializable {
         this.progress = progress;
     }
 
+ 
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.name) ^ (Double.doubleToLongBits(this.name) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.progress) ^ (Double.doubleToLongBits(this.progress) >>> 32));
+        int hash = 3;
+        hash = 41 * hash + Objects.hashCode(this.name);
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.progress) ^ (Double.doubleToLongBits(this.progress) >>> 32));
         return hash;
     }
 
@@ -48,14 +48,16 @@ public class Player implements Serializable {
             return false;
         }
         final Player other = (Player) obj;
-        if (Double.doubleToLongBits(this.name) != Double.doubleToLongBits(other.name)) {
+        if (Double.doubleToLongBits(this.progress) != Double.doubleToLongBits(other.progress)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.progress) != Double.doubleToLongBits(other.progress)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
     }
+
+ 
 
     @Override
     public String toString() {
