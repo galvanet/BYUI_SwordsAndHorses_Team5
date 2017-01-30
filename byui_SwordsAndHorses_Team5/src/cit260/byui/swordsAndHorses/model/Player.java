@@ -69,7 +69,7 @@ public class Player implements Serializable{
     public void setBestTime(double d) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
     
     
 }
