@@ -18,7 +18,8 @@ public class CharacterTrait implements Serializable {
     private double dexterity;
     private double health;
     private double mana;
-    private double coordinates;
+    private double coordinatesX;
+    private double coordinatesY;
 
  public CharacterTrait() {
     }
@@ -60,27 +61,43 @@ public class CharacterTrait implements Serializable {
     }
     public void setMana(double mana) {
         this.mana = mana;
+
+    public double getCoordinatesX() {
+        return coordinatesX;
     }
-    public double getCoordinates() {
-        return coordinates;
+
+    public void setCoordinatesX(double coordinatesX) {
+        this.coordinatesX = coordinatesX;
     }
-    public void setCoordinates(int coordinates1,int coordinates2) {
-        this.coordinates = coordinates;
+
+    public double getCoordinatesY() {
+        return coordinatesY;
+    }
+
+    public void setCoordinatesY(double coordinatesY) {
+        this.coordinatesY = coordinatesY;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
+        int hash = 5;
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.type) ^ (Double.doubleToLongBits(this.type) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.strength) ^ (Double.doubleToLongBits(this.strength) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.wisdom) ^ (Double.doubleToLongBits(this.wisdom) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.dexterity) ^ (Double.doubleToLongBits(this.dexterity) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.health) ^ (Double.doubleToLongBits(this.health) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.mana) ^ (Double.doubleToLongBits(this.mana) >>> 32));
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinatesX) ^ (Double.doubleToLongBits(this.coordinatesX) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinatesY) ^ (Double.doubleToLongBits(this.coordinatesY) >>> 32));
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "CharacterTrait{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinatesX=" + coordinatesX + ", coordinatesY=" + coordinatesY + '}';
+    }
+    
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -111,15 +128,14 @@ public class CharacterTrait implements Serializable {
         if (Double.doubleToLongBits(this.mana) != Double.doubleToLongBits(other.mana)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
+        if (Double.doubleToLongBits(this.coordinatesX) != Double.doubleToLongBits(other.coordinatesX)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.coordinatesY) != Double.doubleToLongBits(other.coordinatesY)) {
             return false;
         }
         return true;
     }
+    
 
-    @Override
-    public String toString() {
-        return "Character{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinates=" + coordinates + '}';
-    }
- 
-}
+  
