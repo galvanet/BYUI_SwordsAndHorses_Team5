@@ -18,65 +18,79 @@ public class CharacterTrait implements Serializable {
     private double dexterity;
     private double health;
     private double mana;
-    private double coordinatesX;
-    private double coordinatesY;
+    private double coordinateX;
+    private double coordinateY;
 
  public CharacterTrait() {
     }
-    
-    
 
     public double getType() {
         return type;
     }
+
     public void setType(double type) {
         this.type = type;
     }
+
     public double getStrength() {
         return strength;
     }
+
     public void setStrength(double strength) {
         this.strength = strength;
     }
+
     public double getWisdom() {
         return wisdom;
     }
+
     public void setWisdom(double wisdom) {
         this.wisdom = wisdom;
     }
+
     public double getDexterity() {
         return dexterity;
     }
+
     public void setDexterity(double dexterity) {
         this.dexterity = dexterity;
     }
+
     public double getHealth() {
         return health;
     }
+
     public void setHealth(double health) {
         this.health = health;
     }
+
     public double getMana() {
         return mana;
     }
+
     public void setMana(double mana) {
         this.mana = mana;
-
-    public double getCoordinatesX() {
-        return coordinatesX;
     }
 
-    public void setCoordinatesX(double coordinatesX) {
-        this.coordinatesX = coordinatesX;
+    public double getCoordinateX() {
+        return coordinateX;
     }
 
-    public double getCoordinatesY() {
-        return coordinatesY;
+    public void setCoordinateX(double coordinateX) {
+        this.coordinateX = coordinateX;
     }
 
-    public void setCoordinatesY(double coordinatesY) {
-        this.coordinatesY = coordinatesY;
+    public double getCoordinateY() {
+        return coordinateY;
     }
+
+    public void setCoordinateY(double coordinateY) {
+        this.coordinateY = coordinateY;
+    }
+    
+    
+
+   
 
     @Override
     public int hashCode() {
@@ -87,14 +101,14 @@ public class CharacterTrait implements Serializable {
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.dexterity) ^ (Double.doubleToLongBits(this.dexterity) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.health) ^ (Double.doubleToLongBits(this.health) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.mana) ^ (Double.doubleToLongBits(this.mana) >>> 32));
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinatesX) ^ (Double.doubleToLongBits(this.coordinatesX) >>> 32));
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinatesY) ^ (Double.doubleToLongBits(this.coordinatesY) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinateX) ^ (Double.doubleToLongBits(this.coordinateX) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinateY) ^ (Double.doubleToLongBits(this.coordinateY) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "CharacterTrait{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinatesX=" + coordinatesX + ", coordinatesY=" + coordinatesY + '}';
+        return "CharacterTrait{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinateX=" + coordinateX + ", coordinateY=" + coordinateY + '}';
     }
     
     
@@ -128,13 +142,14 @@ public class CharacterTrait implements Serializable {
         if (Double.doubleToLongBits(this.mana) != Double.doubleToLongBits(other.mana)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.coordinatesX) != Double.doubleToLongBits(other.coordinatesX)) {
+        if (Double.doubleToLongBits(this.coordinateX) != Double.doubleToLongBits(other.coordinateX)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.coordinatesY) != Double.doubleToLongBits(other.coordinatesY)) {
+        if (Double.doubleToLongBits(this.coordinateY) != Double.doubleToLongBits(other.coordinateY)) {
             return false;
         }
         return true;
+        }
     }
     
 
