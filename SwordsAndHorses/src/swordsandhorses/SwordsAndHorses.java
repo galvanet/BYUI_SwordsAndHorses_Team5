@@ -73,6 +73,7 @@ public class SwordsAndHorses {
        String testMap=gameMap.toString();
        String testLocation=beach.toString();
        String testScene=boatBuild.toString();
+       String testInventory=playOne.toString();
        
        System.out.println(testChar);
         System.out.println(testPlayer);
@@ -82,7 +83,7 @@ public class SwordsAndHorses {
         System.out.println(testMap);
         System.out.println(testLocation);
         System.out.println(testScene);
-        
+       System.out.println(testInventory);
         
         
        
