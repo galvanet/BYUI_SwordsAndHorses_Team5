@@ -18,69 +18,100 @@ public class CharacterTrait implements Serializable {
     private double dexterity;
     private double health;
     private double mana;
-    private double coordinates;
+    private double coordinateX;
+    private double coordinateY;
 
  public CharacterTrait() {
     }
-    
-    
 
     public double getType() {
         return type;
     }
+
     public void setType(double type) {
         this.type = type;
     }
+
     public double getStrength() {
         return strength;
     }
+
     public void setStrength(double strength) {
         this.strength = strength;
     }
+
     public double getWisdom() {
         return wisdom;
     }
+
     public void setWisdom(double wisdom) {
         this.wisdom = wisdom;
     }
+
     public double getDexterity() {
         return dexterity;
     }
+
     public void setDexterity(double dexterity) {
         this.dexterity = dexterity;
     }
+
     public double getHealth() {
         return health;
     }
+
     public void setHealth(double health) {
         this.health = health;
     }
+
     public double getMana() {
         return mana;
     }
+
     public void setMana(double mana) {
         this.mana = mana;
     }
-    public double getCoordinates() {
-        return coordinates;
+
+    public double getCoordinateX() {
+        return coordinateX;
     }
-    public void setCoordinates(int coordinates1,int coordinates2) {
-        this.coordinates = coordinates;
+
+    public void setCoordinateX(double coordinateX) {
+        this.coordinateX = coordinateX;
     }
+
+    public double getCoordinateY() {
+        return coordinateY;
+    }
+
+    public void setCoordinateY(double coordinateY) {
+        this.coordinateY = coordinateY;
+    }
+    
+    
+
+   
 
     @Override
     public int hashCode() {
-        int hash = 7;
+        int hash = 5;
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.type) ^ (Double.doubleToLongBits(this.type) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.strength) ^ (Double.doubleToLongBits(this.strength) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.wisdom) ^ (Double.doubleToLongBits(this.wisdom) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.dexterity) ^ (Double.doubleToLongBits(this.dexterity) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.health) ^ (Double.doubleToLongBits(this.health) >>> 32));
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.mana) ^ (Double.doubleToLongBits(this.mana) >>> 32));
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinateX) ^ (Double.doubleToLongBits(this.coordinateX) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinateY) ^ (Double.doubleToLongBits(this.coordinateY) >>> 32));
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "CharacterTrait{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinateX=" + coordinateX + ", coordinateY=" + coordinateY + '}';
+    }
+    
+    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -111,15 +142,15 @@ public class CharacterTrait implements Serializable {
         if (Double.doubleToLongBits(this.mana) != Double.doubleToLongBits(other.mana)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
+        if (Double.doubleToLongBits(this.coordinateX) != Double.doubleToLongBits(other.coordinateX)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.coordinateY) != Double.doubleToLongBits(other.coordinateY)) {
             return false;
         }
         return true;
+        }
     }
+    
 
-    @Override
-    public String toString() {
-        return "Character{" + "type=" + type + ", strength=" + strength + ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", health=" + health + ", mana=" + mana + ", coordinates=" + coordinates + '}';
-    }
- 
-}
+  

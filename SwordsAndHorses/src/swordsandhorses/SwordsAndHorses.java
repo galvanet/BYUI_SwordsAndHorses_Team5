@@ -29,7 +29,8 @@ public class SwordsAndHorses {
        newGuy.setProgress(0);
        
        CharacterTrait dragon= new CharacterTrait();
-       dragon.setCoordinates(1,1);
+       dragon.setCoordinateX(1);
+       dragon.setCoordinateY(1);
        dragon.setDexterity(1);
        dragon.setHealth(1);
        dragon.setMana(1);

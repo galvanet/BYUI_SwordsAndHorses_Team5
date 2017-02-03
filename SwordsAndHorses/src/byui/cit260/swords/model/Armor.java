@@ -29,7 +29,7 @@ public class Armor implements Serializable{
 
     @Override
     public String toString() {
-        return "DefenseBonus{" + "defenseBonus=" + defenseBonus + '}';
+        return "Armor{" + "defenseBonus=" + defenseBonus + '}';
     }
 
     @Override
