@@ -6,6 +6,7 @@
 package swordsandhorses;
 
 import byui.cit260.swords.model.CharacterTrait;
+import byui.cit260.swords.model.Inventory;
 import byui.cit260.swords.model.Location;
 import byui.cit260.swords.model.Map;
 import byui.cit260.swords.model.Player;
@@ -59,6 +60,10 @@ public class SwordsAndHorses {
        Scene boatBuild= new Scene();
        boatBuild.setDescription("crazyness");
        boatBuild.setPassable(1);
+       
+       Inventory playOne= new Inventory();
+       playOne.setGold(10);
+       playOne.setSpaces(1);
        
        String testChar= dragon.toString();
        String testPlayer=newGuy.toString();
