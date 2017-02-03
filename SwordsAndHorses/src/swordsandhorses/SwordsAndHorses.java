@@ -13,7 +13,7 @@ import byui.cit260.swords.model.Player;
 import byui.cit260.swords.model.Scene;
 import byui.cit260.swordsAndHorses.model.Armor;
 import byui.cit260.swordsAndHorses.model.Item;
-import byui.cit260.swordsAndHorses.model.Weapon;
+import byui.cit260.swords.model.Weapon;
 
 /**
  *
