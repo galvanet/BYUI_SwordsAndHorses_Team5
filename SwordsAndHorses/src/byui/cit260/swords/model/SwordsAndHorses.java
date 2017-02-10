@@ -5,8 +5,6 @@
  */
 package byui.cit260.swords.model;
 
-import byui.cit260.swords.control.CastCreator;
-
 
 
 
@@ -33,8 +31,8 @@ public class SwordsAndHorses {
        dragon.setStrength(1);
        dragon.setWisdom(1);
        
-       Armor helmet=new Armor();
-       helmet.setDefenseBonus(1);
+       Armor Helmet=new Armor();
+       Helmet.setDefenseBonus(3);
        
         Weapon sword= new Weapon();
         sword.setDamage(1);
@@ -62,7 +60,7 @@ public class SwordsAndHorses {
        
        String testChar= dragon.toString();
        String testPlayer=newGuy.toString();
-       String testArmor=helmet.toString();
+       
        String testWeapon=sword.toString();
        String testItem=scroll.toString();
        String testMap=gameMap.toString();
@@ -72,7 +70,7 @@ public class SwordsAndHorses {
        
        System.out.println(testChar);
         System.out.println(testPlayer);
-        System.out.println(testArmor);
+        
         System.out.println(testWeapon);
         System.out.println(testItem);
         System.out.println(testMap);
@@ -80,7 +78,53 @@ public class SwordsAndHorses {
         System.out.println(testScene);
        System.out.println(testInventory);
         
-        CastCreator.castCreator();
+      CharacterTrait ranger= new CharacterTrait();
+        ranger.setStrength(3);
+        ranger.setDexterity(5);
+        ranger.setWisdom(1);
+        ranger.setType("ranger");
+        ranger.setHealth(50);
+        ranger.setMana(0);
+        ranger.setCoordinateX(0);
+        ranger.setCoordinateY(0);
+        ranger.setDefenseValue(15);
+        
+        CharacterTrait warrior = new CharacterTrait();
+        warrior.setStrength(5);
+        warrior.setDexterity(3);
+        warrior.setWisdom(1);
+        warrior.setHealth(70);
+        warrior.setMana(0);
+        warrior.setType("warrior");
+        warrior.setCoordinateX(0);
+        warrior.setCoordinateY(0);
+        warrior.setDefenseValue(15);
+        
+        CharacterTrait wizard = new CharacterTrait();
+        wizard.setWisdom(5);
+        wizard.setDexterity(3);
+        wizard.setStrength(1);
+        wizard.setHealth(40);
+        wizard.setMana(100);
+        wizard.setCoordinateX(0);
+        wizard.setCoordinateY(0);
+        wizard.setType("wizard");
+        wizard.setDefenseValue(13);
+        
+        CharacterTrait cyclops= new CharacterTrait();
+        cyclops.setStrength(5);
+        cyclops.setDexterity(1);
+        cyclops.setWisdom(3.5);
+        cyclops.setDefenseValue(20);
+        cyclops.setHealth(80);
+        cyclops.setMana(30);
+        cyclops.setType("cyclops");
+        cyclops.setCoordinateX(0);
+        cyclops.setCoordinateY(0);
+            }
+    
+        
+      
        
        
        
@@ -88,4 +132,4 @@ public class SwordsAndHorses {
        
     }
     
-}
+
