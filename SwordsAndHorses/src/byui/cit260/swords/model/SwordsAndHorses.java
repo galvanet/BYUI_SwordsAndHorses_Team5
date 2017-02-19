@@ -32,7 +32,7 @@ public class SwordsAndHorses {
        dragon.setWisdom(1);
        
        Armor Helmet=new Armor();
-       Helmet.setDefenseBonus(3);
+       
        
         Weapon sword= new Weapon();
         sword.setDamage(1);
